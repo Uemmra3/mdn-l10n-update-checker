@@ -1,0 +1,16 @@
+{
+
+  "manifest_version": 2,
+  "name": "mdn-l10n-update-checker",
+  "version": "1.0",
+ 
+  "description": "Notify the reader if the l10n version of MDN Web Docs is older than the original(en-US).",
+
+  "content_scripts": [
+    {
+      "matches": ["*://developer.mozilla.org/*"],
+      "js": ["main.js"]
+    }
+  ]
+
+}
