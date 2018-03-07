@@ -28,9 +28,11 @@ xhr.onreadystatechange = function() {
 var url = document.URL
 	.replace(/#.*/, '')
 	.replace(/$.*/, '');
-if (url.match(/developer\.mozilla\.org\/en-US\//)) return;
 console.log(url);
-xhr.open("GET", url + '$json');
-xhr.send(null);
+
+if (/developer\.mozilla\.org\/en-US\//.test(url) == false) {
+  xhr.open("GET", url + '$json');
+  xhr.send(null);
+}
 
 //console.log ('done');
