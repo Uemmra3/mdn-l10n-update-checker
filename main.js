@@ -12,14 +12,21 @@ xhr.onreadystatechange = function() {
     const l10n_date = new Date(json.last_edit);
     console.log(org_date);
     console.log(l10n_date);
-    var datediff = org_date.getTime() - l10n_date.getTime();
-    if (datediff > 0) {
-      console.log('This page is ' + Math.floor(datediff/(24*3600000)) + ' days old!!');
+    var timediff = org_date.getTime() - l10n_date.getTime();
+    if (timediff > 0) {
+      const datediff = Math.floor(timediff/(24*3600000));
+      console.log('This page is ' + datediff + ' days old!!');
       // Highlight edit UI
       //var el = document.querySelector(".page-buttons-edit");
       var el = document.querySelector(".document-actions");
       //el.setAttribute('border: red 1px;');
       el.style.backgroundColor = 'orange';
+
+      // Add datediff text
+      el = document.querySelector("#edit-button");
+      var insText = document.createTextNode('(' + datediff + 'days old)');
+      el.parentNode.insertBefore(insText, el.nextSibling);
+
     } else {
       console.log('This page is up-to-date!!');
     }
