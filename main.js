@@ -1,8 +1,8 @@
+const logPrefix = 'mdn-l10n-update-checker: '
+console.log (logPrefix + 'start');
 
 const json;
 let xhr = new XMLHttpRequest();
-const logPrefix = 'mdn-l10n-update-checker: '
-console.log (logPrefix + 'start');
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4 && xhr.status == 200) {
     //
@@ -23,7 +23,7 @@ xhr.onreadystatechange = function() {
       el.style.backgroundColor = 'orange';
 
       // Add datediff text
-      const insText = document.createTextNode('(' + datediff + 'days old)');
+      const insText = document.createTextNode('(' + datediff + 'days old) ');
       el = document.querySelector("#edit-button");
       el.parentNode.insertBefore(insText, el.nextSibling);
       //el = document.querySelector("#watch-menu");
