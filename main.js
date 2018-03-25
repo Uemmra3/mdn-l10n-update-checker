@@ -3,6 +3,9 @@ console.log (logPrefix + 'start');
 
 const json;
 let xhr = new XMLHttpRequest();
+
+const json;
+let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4 && xhr.status == 200) {
     //
