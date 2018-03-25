@@ -9,6 +9,11 @@ But MDN has so many pages and you may feel you can't follow everything!! So this
 
 When viewing a MDN Web Docs page that needs to update, editor UI is highlighted as below!!
 
+
+このアドオンは翻訳された MDN Web Docs がオリジナル版よりも古いことを教えてくれます。
+MDNの監視機能を補完します！
+更新が必要な MDN Web Docs のページを開くと、下記のようにエディターUIがハイライトされます！
+
 ![Screenshot](https://github.com/Uemmra3/mdn-l10n-update-checker/blob/master/screenshot.png "Screenshot")
 
 === version history ===
