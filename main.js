@@ -24,8 +24,8 @@ xhr.onreadystatechange = function() {
 
       // Add datediff text
       const insText = document.createTextNode('(' + datediff + 'days old) ');
-      //el = document.querySelector("#edit-button");
-      //el.parentNode.insertBefore(insText, el.nextSibling);
+      // el = document.querySelector("#edit-button");
+      // el.parentNode.insertBefore(insText, el.nextSibling);
       el = document.querySelector("#watch-menu");
       el.parentNode.insertBefore(insText, el);
 
