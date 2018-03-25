@@ -1,7 +1,7 @@
 const logPrefix = 'mdn-l10n-update-checker: '
 console.log (logPrefix + 'start');
 
-const json;
+let json;
 let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4 && xhr.status == 200) {
@@ -24,10 +24,10 @@ xhr.onreadystatechange = function() {
 
       // Add datediff text
       const insText = document.createTextNode('(' + datediff + 'days old) ');
-      el = document.querySelector("#edit-button");
-      el.parentNode.insertBefore(insText, el.nextSibling);
-      //el = document.querySelector("#watch-menu");
-      //el.parentNode.insertBefore(insText, el);
+      // el = document.querySelector("#edit-button");
+      // el.parentNode.insertBefore(insText, el.nextSibling);
+      el = document.querySelector("#watch-menu");
+      el.parentNode.insertBefore(insText, el);
 
     } else {
       console.log(logPrefix + 'This page is up-to-date!!');
