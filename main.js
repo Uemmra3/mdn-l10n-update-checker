@@ -15,7 +15,7 @@ xhr.onreadystatechange = function() {
     var timediff = org_date.getTime() - l10n_date.getTime();
     if (timediff > 0) {
       const datediff = Math.floor(timediff/(24*3600000));
-      console.log('This page is ' + datediff + ' days old!!');
+      console.log('This page is ' + datediff + ' days older!!');
       // Highlight edit UI
       //var el = document.querySelector(".page-buttons-edit");
       var el = document.querySelector(".document-actions");
@@ -24,7 +24,9 @@ xhr.onreadystatechange = function() {
 
       // Add datediff text
       el = document.querySelector("#edit-button");
-      var insText = document.createTextNode('(' + datediff + 'days old)');
+      var insText = datediff > 30 ?
+        document.createTextNode('(' + Math.floor(datediff / 30) + ' months older)') :
+        document.createTextNode('(' + datediff + ' days older)');
       el.parentNode.insertBefore(insText, el.nextSibling);
 
     } else {
