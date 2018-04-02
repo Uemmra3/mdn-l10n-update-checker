@@ -9,12 +9,15 @@ xhr.onreadystatechange = function() {
     json = JSON.parse(xhr.responseText);
     //console.log(json.title);
     //console.log(json.translations[0].url);
+
+    // calculate how older
     const org_date = new Date(json.translations[0].last_edit);
     const l10n_date = new Date(json.last_edit);
     console.log(logPrefix + org_date);
     console.log(logPrefix + l10n_date);
     const timediff = org_date.getTime() - l10n_date.getTime();
     if (timediff > 0) {
+      // convert to days
       const datediff = Math.floor(timediff/(24*3600000));
       console.log(logPrefix + 'This page is ' + datediff + ' days older!!');
       // Highlight edit UI
@@ -23,14 +26,22 @@ xhr.onreadystatechange = function() {
       el.style.backgroundColor = 'orange';
 
       // Add datediff text
-      el = document.querySelector("#edit-button");
       const insText = datediff > 30 ?
         document.createTextNode('(' + Math.floor(datediff / 30) + ' months older) ') :
         document.createTextNode('(' + datediff + ' days older) ');
-      // el = document.querySelector("#edit-button");
-      // el.parentNode.insertBefore(insText, el.nextSibling);
       el = document.querySelector("#watch-menu");
-      el.parentNode.insertBefore(insText, el);
+      if (el) {
+	// when logged in
+        el.parentNode.insertBefore(insText, el);
+      } else {
+	// when logged out on PC
+        el = document.querySelector("#edit-button");
+        if (!el) {
+	  // when logged out on mobile
+          //el = document.querySelector("#languages-menu");
+        }
+        if (el) el.parentNode.insertBefore(insText, el.nextSibling);
+      }
 
     } else {
       console.log(logPrefix + 'This page is up-to-date!!');
