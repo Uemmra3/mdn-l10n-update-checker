@@ -17,6 +17,7 @@ MDNの監視機能を補完します！
 ![Screenshot](https://github.com/Uemmra3/mdn-l10n-update-checker/blob/master/screenshot.png "Screenshot")
 
 === version history ===
+- 1.3 display how older on mobide version.
 - 1.2 display how older the page is than the English one.
 - 1.1 disable on English pages.
 - 1.0 first release.
