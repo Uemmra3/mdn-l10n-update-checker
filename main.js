@@ -38,7 +38,7 @@ xhr.onreadystatechange = function() {
         el = document.querySelector("#edit-button");
         if (!el) {
 	  // when logged out on mobile
-          //el = document.querySelector("#languages-menu");
+          el = document.querySelector("#languages-menu");
         }
         if (el) el.parentNode.insertBefore(insText, el.nextSibling);
       }
