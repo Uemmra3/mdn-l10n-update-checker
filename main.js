@@ -1,17 +1,12 @@
 const logPrefix = 'mdn-l10n-update-checker: '
 console.log (logPrefix + 'start');
 
-<<<<<<< HEAD
-const xhr = new XMLHttpRequest();
-console.log ('start');
-=======
 let json;
 let xhr = new XMLHttpRequest();
->>>>>>> 4be18168cc343504355c527dd3d6121364f1b63e
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4 && xhr.status == 200) {
     //
-    const json = JSON.parse(xhr.responseText);
+    json = JSON.parse(xhr.responseText);
     //console.log(json.title);
     //console.log(json.translations[0].url);
 
