@@ -23,7 +23,7 @@ when logged in.
 
 === version history ===
 - 1.4 display how older when logged out.
-- 1.3 display how older on mobide version.
+- <strike>1.3 display how older on mobile version.</strike>
 - 1.2 display how older the page is than the English one.
 - 1.1 disable on English pages.
 - 1.0 first release.
