@@ -1,18 +1,20 @@
 # mdn-l10n-update-checker
+This is a Firefox add-on that show you that the localized page on MDN Web Docs is older than the original(en-US).
 
-https://addons.mozilla.org/en-US/firefox/addon/mdn-l10n-update-checker/
-
-This is a Firefox add-on that notify the reader of MDN Web Docs if the localized version of the page is older than the original(en-US).
-
-Once you logged in to MDN, you can watch any English page or subpages to get the latest information. This is good if you know which page to watch.
-But MDN has so many pages and you may feel you can't follow everything!! So this add-on will help you know whether the localized page you are looking is updated.
+Once you logged in to MDN, you can watch any English page or subpages to get the update information. This is good if you know which page to watch.
+But MDN has so many pages that you can't follow everything!! So this add-on will help you to know whether the localized page you are looking is updated.
 
 When viewing a MDN Web Docs page that needs to update, editor UI is highlighted as below!!
 
+You can install here(AMO):
+https://addons.mozilla.org/en-US/firefox/addon/mdn-l10n-update-checker/
 
 このアドオンは翻訳された MDN Web Docs がオリジナル版よりも古いことを教えてくれます。
 MDNの監視機能を補完します！
 更新が必要な MDN Web Docs のページを開くと、下記のようにエディターUIがハイライトされます！
+
+インストールはこちら(AMO):
+https://addons.mozilla.org/en-US/firefox/addon/mdn-l10n-update-checker/
 
 ![Screenshot](https://github.com/Uemmra3/mdn-l10n-update-checker/blob/master/Screenshot-logged-out.png "Screenshot when logged out")
 when logged out.
